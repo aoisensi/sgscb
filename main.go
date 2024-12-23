@@ -140,5 +140,5 @@ func formatPN(n int64) string {
 	if n == 0 {
 		return "±0"
 	}
-	return fmt.Sprintf("%+d", n)
+	return message.NewPrinter(language.English).Sprintf("%+d", n)
 }
