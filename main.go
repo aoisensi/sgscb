@@ -40,8 +40,8 @@ func main() {
 				log.Printf("get global stats for game failed: %v", err)
 				return
 			}
+			saveLatest(actor.Appid, stats)
 			if latest == nil {
-				saveLatest(actor.Appid, stats)
 				log.Println("only saved latest")
 				return
 			}
